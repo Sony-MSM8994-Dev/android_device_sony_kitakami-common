@@ -309,6 +309,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
    camera.qcom_shim
 
+# Soong
+PRODUCT_SOONG_NAMESPACES += \
+    device/sony/kitakami-common
+
 # Tethering
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay

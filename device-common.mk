@@ -196,6 +196,7 @@ PRODUCT_PACKAGES += \
 
 # IMS
 PRODUCT_PACKAGES += \
+    libbase_shim \
     libshims_ims \
     libshims_boringssl
 

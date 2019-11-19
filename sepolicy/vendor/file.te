@@ -26,3 +26,6 @@ type fpc_data_file, file_type;
 
 # Camera
 type sysfs_camera, sysfs_type, fs_type;
+
+# LTALabel
+type lta_label, fs_type;

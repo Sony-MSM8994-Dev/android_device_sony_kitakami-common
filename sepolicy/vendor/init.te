@@ -54,3 +54,6 @@ allow init iorapd_data_file:file rw_file_perms;
 allow init system_file:dir relabelfrom;
 allow init system_file:file { execute_no_trans relabelfrom };
 allow init sysfs_devices_system_cpu:file rw_file_perms;
+
+# Allow init to read files in /lta-label
+r_dir_file(init, lta_label)

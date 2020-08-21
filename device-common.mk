@@ -310,6 +310,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
    camera.qcom_shim
 
+# Tethering
+PRODUCT_PACKAGES += \
+    TetheringConfigOverlay
+
 # Thermal
 PRODUCT_PACKAGES += \
     thermal.qcom

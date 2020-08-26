@@ -6,6 +6,3 @@ allow radio ims_socket:sock_file write;
 
 # Connect to ims service.
 allow radio ims:unix_stream_socket connectto;
-
-# Access RCS properties
-set_prop(radio, rcs_prop)

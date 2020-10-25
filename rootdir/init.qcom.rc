@@ -689,6 +689,7 @@ service iddd /system/bin/iddd
     class core
     user oem_2987
     group oem_2987 log inet oem_2993
+    disabled
 
 on property:sys.boot_completed=1
     rm /data/system/perfd/default_values

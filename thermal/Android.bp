@@ -1,6 +1,5 @@
 //
-// Copyright (C) 2017 The Android Open Source Project
-// Copyright (C) 2017 The LineageOS Project
+// Copyright 2016 The Android Open Source Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,20 +12,17 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-cc_binary {
-    name: "android.hardware.biometrics.fingerprint@2.1-service.kitakami",
-    defaults: ["hidl_defaults"],
+//
+
+cc_library_shared {
+    cflags: ["-Wno-unused-parameter"],
     relative_install_path: "hw",
-    init_rc: ["android.hardware.biometrics.fingerprint@2.1-service.kitakami.rc"],
-    srcs: ["service.cpp", "BiometricsFingerprint.cpp"],
-    shared_libs: [
-        "libutils",
-        "liblog",
-        "libhidlbase",
-        "libhidltransport",
-        "libhardware",
-        "libhwbinder",
-        "android.hardware.biometrics.fingerprint@2.1",
-    ],
     proprietary: true,
+    srcs: ["thermal.c"],
+    shared_libs: [
+        "liblog",
+        "libcutils",
+    ],
+
+    name: "thermal.qcom",
 }

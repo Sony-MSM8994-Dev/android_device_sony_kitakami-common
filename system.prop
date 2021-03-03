@@ -120,6 +120,10 @@ ro.sony.sensors.dpc=false
 ro.sony.sensors.pug=false
 ro.qc.sdk.sensors.gestures=true
 
+# SoC
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=MSM8994
+
 # Wifi
 wifi.interface=wlan0
 wifi.direct.interface=p2p-dev-wlan0

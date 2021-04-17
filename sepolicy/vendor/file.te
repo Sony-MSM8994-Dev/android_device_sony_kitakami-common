@@ -1,3 +1,6 @@
+# DRM
+type mediadrm_vendor_data_file, file_type, data_file_type;
+
 # FM
 type brcm_ldisc_sysfs, sysfs_type, fs_type;
 

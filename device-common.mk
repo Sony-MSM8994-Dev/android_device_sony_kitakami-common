@@ -194,6 +194,11 @@ PRODUCT_PACKAGES += \
     libhwbinder.vendor \
     vndservicemanager
 
+# IMS
+PRODUCT_PACKAGES += \
+    libshims_ims \
+    libshims_boringssl
+
 # Init
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/fstab.qcom:root/fstab.qcom \

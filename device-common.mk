@@ -119,7 +119,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     camera.msm8994 \
-    Snap
+    Snap \
+    vendor.qti.hardware.camera.device@1.0 \
+    vendor.qti.hardware.camera.device@1.0_vendor
 
 # Charger
 PRODUCT_PACKAGES += charger_res_images
@@ -201,6 +203,7 @@ PRODUCT_PACKAGES += \
 # IMS
 PRODUCT_PACKAGES += \
     libbase_shim \
+    libui_shim \
     libshims_ims \
     libshims_boringssl
 

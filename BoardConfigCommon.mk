@@ -20,6 +20,9 @@ TARGET_SPECIFIC_HEADER_PATH += $(COMMON_PATH)/include
 
 BOARD_VENDOR := sony
 
+# Build
+BUILD_BROKEN_DUP_RULES := true
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8994
 TARGET_NO_BOOTLOADER := true
@@ -149,6 +152,10 @@ TARGET_PROVIDES_LIBLIGHT := true
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
 
+ifneq ($(BOARD_HAVE_RADIO),false)
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest_radio.xml
+endif
+
 # Init
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 
@@ -206,7 +213,8 @@ TARGET_LD_SHIM_LIBS := \
 ifneq ($(BOARD_HAVE_RADIO),false)
 TARGET_LD_SHIM_LIBS += \
      /system/vendor/lib64/lib-imsvt.so|libshims_ims.so \
-     /system/vendor/lib64/lib-imsdpl.so|libshims_boringssl.so
+     /system/vendor/lib64/lib-imsdpl.so|libshims_boringssl.so \
+     /system/lib64/lib-imsvideocodec.so|libui_shim.so
 endif
 
 # SELinux

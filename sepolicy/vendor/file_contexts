@@ -98,3 +98,6 @@
 /system/vendor/bin/ims_rtp_daemon                          u:object_r:ims_exec:s0
 
 /system/vendor/(lib|lib64)/libril-wrapper\.so              u:object_r:hal_ril_wrapper_exec:s0
+
+# Vulkan
+/(vendor|system/vendor)/lib(64)?/vulkan\.[a-z0-9]*\.so             u:object_r:same_process_hal_file:s0

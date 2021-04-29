@@ -22,3 +22,6 @@ allow rild tad:unix_stream_socket connectto;
 allow rild cache_file:dir search;
 allow rild firmware_file:dir search;
 allow rild device:file { open write };
+
+# Grant access to Qualcomm MSM Interface (QMI) radio sockets
+qmux_socket(rild)

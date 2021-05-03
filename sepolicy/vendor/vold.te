@@ -3,3 +3,4 @@ allow vold firmware_file:dir search;
 allow vold firmware_file:file { getattr open read };
 allow vold tee_prop:file { r_file_perms };
 allow vold hal_bootctl_hwservice:hwservice_manager find;
+allow vold block_device:blk_file getattr;

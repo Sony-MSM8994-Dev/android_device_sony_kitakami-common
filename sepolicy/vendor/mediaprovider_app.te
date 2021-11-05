@@ -1,0 +1,2 @@
+allow mediaprovider_app rootfs:dir { add_name open read remove_name write };
+allow mediaprovider_app rootfs:file { create getattr open read rename setattr unlink write };

@@ -1,42 +1,30 @@
-#
-# Copyright (C) 2017 The LineageOS Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
+ifneq ($(filter yukon rhine shinano kanuti kitakami loire tone,$(PRODUCT_PLATFORM)),)
 
-LOCAL_PATH := $(call my-dir)
+MM_V4L2_DRIVER_LIST += msm8960
+MM_V4L2_DRIVER_LIST += msm8974
+MM_V4L2_DRIVER_LIST += msm8916
+MM_V4L2_DRIVER_LIST += msm8226
+MM_V4L2_DRIVER_LIST += msm8610
+MM_V4L2_DRIVER_LIST += apq8084
+MM_V4L2_DRIVER_LIST += mpq8092
+MM_V4L2_DRIVER_LIST += msm_bronze
+MM_V4L2_DRIVER_LIST += msm8994
+MM_V4L2_DRIVER_LIST += msm8084
+MM_V4L2_DRIVER_LIST += msm8909
+MM_V4L2_DRIVER_LIST += msm8952
+MM_V4L2_DRIVER_LIST += msm8996
+MM_V4L2_DRIVER_LIST += msm8992
+MM_V4L2_DRIVER_LIST += msm8937
+MM_V4L2_DRIVER_LIST += msm8953
+MM_V4L2_DRIVER_LIST += msmcobalt
+MM_V4L2_DRIVER_LIST += msmfalcon
 
-include $(CLEAR_VARS)
+ifneq (,$(filter $(MM_V4L2_DRIVER_LIST),$(TARGET_BOARD_PLATFORM)))
+  ifneq ($(strip $(USE_CAMERA_STUB)),true)
+    ifneq ($(BUILD_TINY_ANDROID),true)
+      include $(call all-subdir-makefiles)
+    endif
+  endif
+endif
 
-LOCAL_HEADER_LIBRARIES := libnativebase_headers
-
-LOCAL_SRC_FILES := \
-    CameraWrapper.cpp \
-    Camera3Wrapper.cpp
-
-LOCAL_STATIC_LIBRARIES := libbase libarect
-LOCAL_SHARED_LIBRARIES := \
-    libhardware \
-    liblog \
-    libcamera_client \
-    libgui \
-    libutils \
-    android.hidl.token@1.0-utils
-
-LOCAL_MODULE_RELATIVE_PATH := hw
-LOCAL_MODULE := camera.$(TARGET_BOARD_PLATFORM)
-LOCAL_MODULE_TAGS := optional
-LOCAL_PROPRIETARY_MODULE := true
-
-LOCAL_32_BIT_ONLY := $(BOARD_QTI_CAMERA_32BIT_ONLY)
-include $(BUILD_SHARED_LIBRARY)
+endif

@@ -138,10 +138,6 @@ PRODUCT_PACKAGES += charger_res_images
 PRODUCT_PACKAGES += \
     disable_configstore
 
-# Confirmationui
-PRODUCT_PACKAGES += \
-    android.hardware.confirmationui@1.0-service
-
 # CryptfsHW
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee

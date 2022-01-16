@@ -178,10 +178,6 @@ PRODUCT_PACKAGES += \
     brcm-uim-sysfs \
     libfmradio.v4l2-fm
 
-# AuthSecret
-PRODUCT_PACKAGES += \
-    android.hardware.authsecret@1.0-service
-
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \

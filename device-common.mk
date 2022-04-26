@@ -126,11 +126,17 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service \
-    android.hardware.camera.provider@2.4-impl:32 \
+    android.hardware.camera.provider@2.4-impl \
     camera.msm8994 \
     Snap \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.device@1.0_vendor
+
+PRODUCT_PACKAGES += \
+    libmmcamera_interface \
+    libmmjpeg_interface \
+    libmm-qcamera \
+    libqomx_core
 
 # Charger
 PRODUCT_PACKAGES += charger_res_images
@@ -359,10 +365,6 @@ PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
     android.hardware.sensors@1.0-impl \
     libshim_sensors
-
-# Shim libs
-PRODUCT_PACKAGES += \
-   camera.qcom_shim
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \

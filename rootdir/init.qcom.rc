@@ -741,7 +741,6 @@ service ppd /system/vendor/bin/mm-pp-daemon
     socket pps stream 0660 system system
     group system graphics
     writepid /dev/cpuset/system-background/tasks
-    disabled
 
 on property:init.svc.per_mgr=running
     start per_proxy

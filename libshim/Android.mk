@@ -105,6 +105,7 @@ include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := libshim_sensors.cpp
 LOCAL_MODULE := libshim_sensors
+LOCAL_SHARED_LIBRARIES := libsensor libutils
 LOCAL_MODULE_TAGS := optional
 LOCAL_MULTILIB := both
 

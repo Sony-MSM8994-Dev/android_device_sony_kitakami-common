@@ -76,7 +76,6 @@ PRODUCT_COPY_FILES += \
 # Audio
 PRODUCT_PACKAGES += \
     audiod \
-    audio.a2dp.default \
     audio.bluetooth.default \
     android.hardware.audio@2.0-impl \
     android.hardware.audio@6.0-impl \

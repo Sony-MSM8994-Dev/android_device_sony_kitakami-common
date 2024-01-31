@@ -200,8 +200,7 @@ PRODUCT_PACKAGES += \
     libbase_shim \
     libshim_ui \
     libshims_ims \
-    libshim_libimsmedia \
-    libshims_boringssl
+    libshim_libimsmedia
 
 # Init
 PRODUCT_COPY_FILES += \
